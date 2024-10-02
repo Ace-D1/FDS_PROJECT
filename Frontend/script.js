@@ -43,3 +43,4 @@ submitButton.addEventListener('click', function (event) {
         selectedJobDisplay.textContent = 'Please select both a job title and a job role.';
     }
 });
+
