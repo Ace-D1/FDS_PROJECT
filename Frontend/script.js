@@ -1,11 +1,51 @@
 const jobTitles = {
-    'Engineering': ['Software Engineer', 'Frontend Developer', 'Backend Developer', 'Full Stack Developer'],
-    'Data & Analytics': ['Data Scientist', 'Data Analyst', 'Machine Learning Engineer', 'AI Researcher'],
-    'Management': ['Project Manager', 'Agile Coach', 'Scrum Master', 'Program Manager'],
-    'Marketing & Sales': ['Marketing Coordinator', 'Sales Associate'],
-    'HR & Operations Roles': ['Human Resources Coordinator', 'Senior HR Generalist'],
-    'Creative Roles': ['Graphic Designer', 'Product Designer']
+    'Engineering': [
+        'Software Engineer',
+        'Software Engineer Manager',
+        'Full Stack Engineer',
+        'Senior Software Engineer',
+        'Back end Developer',
+        'Front end Developer',
+        'Software Developer',
+        'Web Developer',
+        'Junior Software Developer',
+        'Junior Software Engineer',
+        'Junior Web Developer',
+        'Front End Developer'
+    ],
+    'Data & Analytics': [
+        'Data Scientist',
+        'Data Analyst',
+        'Research Scientist',
+        'Senior Data Scientist',
+        'Junior Data Analyst',
+        'Director of Data Science',
+        'Financial Analyst'
+    ],
+    'Management': [
+        'Product Manager',
+        'Operations Manager',
+        'Marketing Manager',
+        'Senior Project Engineer',
+        'Financial Manager',
+        'Human Resources Manager',
+        'Senior Human Resources Manager',
+        'Director of Marketing',
+        'Director of HR',
+        'Sales Manager',
+        'Senior Product Marketing Manager',
+        'Director of Operations',
+        'Research Director',
+        'Project Manager'
+    ],
+    'Marketing & Sales': ['Marketing Coordinator','Marketing Analyst','Sales Associate','Junior Sales Associate',
+                                'Sales Representative','Sale Executive','Junior Sales Representative','Digital Marketing Manager','Marketing Director',
+                                'Content Marketing Manager','Junior Marketing Manager','Sales Director','Social Media Manager','Digital Marketing Specialist'],
+
+    'HR & Operations': ['Human Resources Coordinator','Senior HR Generalist','Junior HR Generalist','Junior HR Coordinator','Receptionist'],
+    'Creative Roles': ['Graphic Designer','Product Designer']
 };
+
 
 const jobTitleSelect = document.getElementById('job-title');
 const jobRoleSelect = document.getElementById('job-role');
@@ -43,4 +83,3 @@ submitButton.addEventListener('click', function (event) {
         selectedJobDisplay.textContent = 'Please select both a job title and a job role.';
     }
 });
-
