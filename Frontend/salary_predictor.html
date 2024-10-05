@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Role Selector</title>
+    <link rel="stylesheet" href="salary_styling.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    </a>
+    <div class="navbar">
+        <a class="navbar-brand" href="#">
+            <img src="C:\Users\DS\.vscode\FDS_PROJECT\salary.jpg" alt="Logo" class="logo"> <!-- Correct image path -->
+            </a>
+        <a href="home_page.html" class="active">Home</a>
+        <a href="company_data.html">Company Data</a>
+        <a href="salary_predictor.html">Salary Predictor</a>
+        <a href="admin.html">Admin</a>
+    </div>
+
+    <!-- Main Section -->
+    <div class="container">
+        <h1>Job Role Selector</h1>
+        <form id="job-form" method="POST">
+            <div class="form-group">
+                <label for="age">Age (18-64) :</label>
+                <input type="number" id="age" name="age" min="18" max="64" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Select your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="education">Education Level:</label>
+                <select id="education" name="education" required>
+                    <option value="" disabled selected>Select your education level</option>
+                    <option value="highschool">High School</option>
+                    <option value="bachelor">Bachelor's Degree</option>
+                    <option value="master">Master's Degree</option>
+                    <option value="phd">PhD</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="experience">Years of Experience:</label>
+                <input type="number" id="experience" name="experience" required>
+            </div>
+            <div class="form-group">
+                <label for="job-role">Job Role:</label>
+                <select id="job-role" name="job-role" required>
+                    <option value="" disabled selected>Select a job role</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="Data & Analytics">Data & Analytics</option>
+                    <option value="Management">Management</option>
+                    <option value="Marketing & Sales">Marketing & Sales</option>
+                    <option value="HR & Operations Roles">HR & Operations Roles</option>
+                    <option value="Creative Roles">Creative Roles</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="job-title">Job Title:</label>
+                <select id="job-title" name="job-title" required>
+                    <option value="" disabled selected>Select a job title</option>
+                </select>
+            </div>
+            <button type="submit" id="submit">Submit</button>
+        </form>
+        <div id="selected-job"></div> <!-- Added to display selected job -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
