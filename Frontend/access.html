@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Page</title>
+    <link rel="stylesheet" href="access_style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <img src="C:\Users\DS\.vscode\FDS_PROJECT\Frontend\salary.jpg" alt="Logo" class="logo">
+        <a href="#home">Home</a>
+        <a href="#company_data">Company Data</a>
+        <a href="#admin" class="active">Admin</a>
+        <a href="#salarypredictor">Salary Predictor</a>
+    </div>
+
+    <!-- Main Container (similar to Admin) -->
+    <div class="admin-container">
+        <!-- Sidebar (same as Admin page) -->
+        <div class="admin-sidebar">
+            <ul>
+                <li><a href="#addremove">Add/Remove</a></li>
+                <li><a href="#access" class="active">Access</a></li>
+            </ul>
+        </div>
+
+        <!-- Content Area with Table -->
+        <div class="admin-content">
+            <h1>Access Page</h1>
+            <p>Here you can manage access permissions.</p>
+
+            <!-- Table in the center -->
+            <table class="access-table">
+                <thead>
+                    <tr>
+                        <th>Sr. Number</th>
+                        <th>Email ID</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>user1@example.com</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>user2@example.com</td>
+                        <td>Inactive</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
