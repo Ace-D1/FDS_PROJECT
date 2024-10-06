@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add/Remove Users</title>
+    <link rel="stylesheet" href="admin.css">
+    <style>
+        .user-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .user-table th, .user-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .user-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .user-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .user-table tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a class="navbar-brand" href="#">
+            <img src="salary.jpg" alt="Logo" class="logo">
+        </a>
+        <a href="home_page.html">Home</a>
+        <a href="company_data.html">Company Data</a>
+        <a href="salary_predictor.html">Salary Predictor</a>
+        <a href="admin.html" class="active">Admin</a>
+    </div>
+
+    <!-- Admin Panel Section -->
+    <div class="admin-container">
+        <!-- Left column with options -->
+        <div class="admin-sidebar">
+            <ul>
+                <li><a href="add_remove.html" class="active">Add/Remove</a></li>
+                <li><a href="#">Give Access</a></li>
+            </ul>
+        </div>
+        
+        <!-- Content area with table -->
+        <div class="admin-content">
+            <h1>Add/Remove Users</h1>
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Education</th>
+                        <th>Years of Experience</th>
+                        <th>Job Role</th>
+                        <th>Job Title</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+                    <!-- Table rows will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // This script will populate the table with data from your database
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fetch data from your backend API
+            fetch('/api/users')
+                .then(response => response.json())
+                .then(data => {
+                    const tableBody = document.getElementById('userTableBody');
+                    data.forEach(user => {
+                        const row = `
+                            <tr>
+                                <td>${user.email}</td>
+                                <td>${user.age}</td>
+                                <td>${user.gender}</td>
+                                <td>${user.education}</td>
+                                <td>${user.yearsOfExperience}</td>
+                                <td>${user.jobRole}</td>
+                                <td>${user.jobTitle}</td>
+                                <td>
+                                    <button onclick="editUser('${user.id}')">Edit</button>
+                                    <button onclick="deleteUser('${user.id}')">Delete</button>
+                                </td>
+                            </tr>
+                        `;
+                        tableBody.innerHTML += row;
+                    });
+                })
+                .catch(error => console.error('Error fetching user data:', error));
+        });
+
+        function editUser(userId) {
+            // Implement edit functionality
+            console.log('Edit user with ID:', userId);
+        }
+
+        function deleteUser(userId) {
+            // Implement delete functionality
+            console.log('Delete user with ID:', userId);
+        }
+    </script>
+</body>
+</html>
